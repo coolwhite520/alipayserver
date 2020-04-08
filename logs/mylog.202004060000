@@ -1,0 +1,4 @@
+time="2020-04-06 22:51:04" level=info msg="@@@@ChromeDriverService start success."
+time="2020-04-06 22:51:20" level=error msg="http: Server closed"
+time="2020-04-06 22:51:20" level=fatal msg="Get http://localhost:9515/wd/hub/shutdown: dial tcp 127.0.0.1:9515: connect: connection refused" funcName=StopServer
+time="2020-04-06 22:51:33" level=info msg="@@@@ChromeDriverService start success."
