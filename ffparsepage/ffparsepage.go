@@ -8,6 +8,7 @@ import (
 	"github.com/Lofanmi/pinyin-golang/pinyin"
 	"github.com/Unknwon/goconfig"
 	"github.com/axgle/mahonia"
+	. "github.com/coolwhite520/alipayserver/ffdata"
 	"github.com/coolwhite520/alipayserver/ffdb"
 	"github.com/coolwhite520/alipayserver/fflua"
 	"github.com/coolwhite520/alipayserver/report"

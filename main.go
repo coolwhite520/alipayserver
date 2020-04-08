@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"github.com/coolwhite520/alipayserver/ffautoupdate"
+	. "github.com/coolwhite520/alipayserver/ffdata"
 	"github.com/coolwhite520/alipayserver/ffdb"
 	"github.com/coolwhite520/alipayserver/fflua"
 	"github.com/coolwhite520/alipayserver/ffparsepage"
