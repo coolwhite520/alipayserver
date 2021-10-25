@@ -1,9 +1,9 @@
 package report
 
 import (
-	"bytes"
 	. "alipayserver/ffdata"
 	"alipayserver/ffdb"
+	"bytes"
 	log "github.com/sirupsen/logrus"
 	//log "github.com/jeanphorn/log4go"
 	"github.com/Unknwon/goconfig"

@@ -25,10 +25,9 @@ import (
 )
 
 var (
-	    app    *iris.Application
+	app        *iris.Application
 	webPageMap = make(map[int]*FFChannelTag)
 )
-
 
 func init() {
 	logcuthook.ConfigLocalFilesystemLogger("./logs", "mylog", time.Hour*24*60, time.Hour*24)
