@@ -1,8 +1,6 @@
 package main
 
 import (
-	"bytes"
-	"encoding/json"
 	"alipayserver/ffautoupdate"
 	. "alipayserver/ffdata"
 	"alipayserver/ffdb"
@@ -12,6 +10,8 @@ import (
 	"alipayserver/ip"
 	"alipayserver/logcuthook"
 	"alipayserver/loghook"
+	"bytes"
+	"encoding/json"
 	"github.com/kataras/iris"
 	"github.com/kataras/iris/context"
 	log "github.com/sirupsen/logrus"
@@ -28,6 +28,7 @@ var (
 	    app    *iris.Application
 	webPageMap = make(map[int]*FFChannelTag)
 )
+
 
 func init() {
 	logcuthook.ConfigLocalFilesystemLogger("./logs", "mylog", time.Hour*24*60, time.Hour*24)
