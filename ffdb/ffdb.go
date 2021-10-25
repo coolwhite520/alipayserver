@@ -1,7 +1,7 @@
 package ffdb
 
 import (
-	. "github.com/coolwhite520/alipayserver/ffdata"
+	. "alipayserver/ffdata"
 	"encoding/json"
 	"fmt"
 	log "github.com/jeanphorn/log4go"

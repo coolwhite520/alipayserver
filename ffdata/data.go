@@ -1,7 +1,7 @@
 package ffdata
 
 import (
-	"github.com/coolwhite520/alipayserver/ffrsa"
+	"alipayserver/ffrsa"
 	"bytes"
 	"crypto/md5"
 	"encoding/hex"

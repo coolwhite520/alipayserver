@@ -2,9 +2,9 @@ package fflua
 
 import (
 	"errors"
-	. "github.com/coolwhite520/alipayserver/ffdata"
-	"github.com/coolwhite520/alipayserver/ffluabase"
-	"github.com/coolwhite520/alipayserver/tools"
+	. "alipayserver/ffdata"
+	"alipayserver/ffluabase"
+	"alipayserver/tools"
 	"github.com/yuin/gluamapper"
 	lua "github.com/yuin/gopher-lua"
 	"math"

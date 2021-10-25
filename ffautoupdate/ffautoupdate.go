@@ -1,8 +1,8 @@
 package ffautoupdate
 
 import (
-	. "github.com/coolwhite520/alipayserver/ffdata"
-	"github.com/coolwhite520/alipayserver/fflua"
+	. "alipayserver/ffdata"
+	"alipayserver/fflua"
 	"encoding/json"
 	"errors"
 	"io"

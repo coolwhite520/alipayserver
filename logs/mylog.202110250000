@@ -1,0 +1,3 @@
+time="2021-10-25 15:25:32" level=fatal msg="exec: \"/usr/local/bin/chromedriver\": file does not exist" funcName=NewChromeDriverService port=9515
+time="2021-10-25 15:46:08" level=fatal msg="exec: \"/usr/local/bin/chromedriver\": file does not exist" funcName=NewChromeDriverService port=9515
+time="2021-10-25 15:46:15" level=fatal msg="exec: \"/usr/local/bin/chromedriver\": file does not exist" funcName=NewChromeDriverService port=9515
