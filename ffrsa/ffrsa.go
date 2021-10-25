@@ -26,6 +26,35 @@ type FFRsa struct {
 var once sync.Once
 var instance *FFRsa
 
+
+// Load private key from base64
+func loadPrivateKeyBase64(base64key string) (*rsa.PrivateKey, error) {
+	keybytes, err := base64.StdEncoding.DecodeString(base64key)
+	if err != nil {
+		return nil, fmt.Errorf("base64 decode failed, error=%s\n", err.Error())
+	}
+	privatekey, err := x509.ParsePKCS8PrivateKey(keybytes)
+	if err != nil {
+		return nil, err
+	}
+	return privatekey.(*rsa.PrivateKey), nil
+}
+
+//加载公钥字符串获取公钥对象
+func loadPublicKeyBase64(base64key string) (*rsa.PublicKey, error) {
+
+	keybytes, err := base64.StdEncoding.DecodeString(base64key)
+	if err != nil {
+		return nil, fmt.Errorf("base64 decode failed, error=%s\n", err.Error())
+	}
+	pubkeyinterface, err := x509.ParsePKIXPublicKey(keybytes)
+	if err != nil {
+		return nil, err
+	}
+	publickey := pubkeyinterface.(*rsa.PublicKey)
+	return publickey, nil
+}
+
 func GetInstance() *FFRsa{
 	once.Do(func() {
 		instance = &FFRsa{}
@@ -126,33 +155,5 @@ func (f *FFRsa) RsaDecryptBlock(encrypted string, privateKey *rsa.PrivateKey) (s
 		buffer.Write(decrypted)
 	}
 	return buffer.String(), err
-}
-
-// Load private key from base64
-func loadPrivateKeyBase64(base64key string) (*rsa.PrivateKey, error) {
-	keybytes, err := base64.StdEncoding.DecodeString(base64key)
-	if err != nil {
-		return nil, fmt.Errorf("base64 decode failed, error=%s\n", err.Error())
-	}
-	privatekey, err := x509.ParsePKCS8PrivateKey(keybytes)
-	if err != nil {
-		return nil, err
-	}
-	return privatekey.(*rsa.PrivateKey), nil
-}
-
-//加载公钥字符串获取公钥对象
-func loadPublicKeyBase64(base64key string) (*rsa.PublicKey, error) {
-
-	keybytes, err := base64.StdEncoding.DecodeString(base64key)
-	if err != nil {
-		return nil, fmt.Errorf("base64 decode failed, error=%s\n", err.Error())
-	}
-	pubkeyinterface, err := x509.ParsePKIXPublicKey(keybytes)
-	if err != nil {
-		return nil, err
-	}
-	publickey := pubkeyinterface.(*rsa.PublicKey)
-	return publickey, nil
 }
 

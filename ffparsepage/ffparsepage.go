@@ -1,6 +1,10 @@
 package ffparsepage
 
 import (
+	. "alipayserver/ffdata"
+	"alipayserver/ffdb"
+	"alipayserver/fflua"
+	"alipayserver/report"
 	"bytes"
 	"encoding/base64"
 	"errors"
@@ -8,10 +12,6 @@ import (
 	"github.com/Lofanmi/pinyin-golang/pinyin"
 	"github.com/Unknwon/goconfig"
 	"github.com/axgle/mahonia"
-	. "alipayserver/ffdata"
-	"alipayserver/ffdb"
-	"alipayserver/fflua"
-	"alipayserver/report"
 	"github.com/makiuchi-d/gozxing"
 	"github.com/makiuchi-d/gozxing/qrcode"
 	log "github.com/sirupsen/logrus"

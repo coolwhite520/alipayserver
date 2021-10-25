@@ -12,7 +12,7 @@ import (
 	"os"
 )
 
-//k : paymentid, v:paymentid 这么创建便于发送消息，知道哪个webpage退出
+// FFChannelTag k : paymentid, v:paymentid 这么创建便于发送消息，知道哪个webpage退出
 type FFChannelTag struct {
 	ChQrcode   chan string //二维码的通道
 	ChQuit     chan int    //主线程收到退出消息的通道
@@ -20,7 +20,7 @@ type FFChannelTag struct {
 	WebPage    selenium.WebDriver
 }
 
-//存储在数据库中的值
+// PayRecordData 存储在数据库中的值
 type PayRecordData struct {
 	Paymentid int    `json:"paymentid"`
 	Money     int    `json:"money"`
